@@ -1,26 +1,26 @@
-# Insight API
+# Insight API Dash
 
-A Bitcoin blockchain REST and web socket API service for [Bitcore Node](https://github.com/bitpay/bitcore-node).
+A Dash blockchain REST and web socket API service for [Bitcore Node Dash](https://github.com/dashpay/bitcore-node-dash).
 
-This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/bitpay/insight-ui.
+This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/dashpay/insight-ui-dash.
 
 ## Getting Started
 
 ```bash
-npm install -g bitcore-node@latest
-bitcore-node create mynode
+npm install -g bitcore-node-dash@latest
+bitcore-node-dash create mynode
 cd mynode
-bitcore-node install insight-api
-bitcore-node start
+bitcore-node-dash install insight-api-dash
+bitcore-node-dash start
 ```
 
-The API endpoints will be available by default at: `http://localhost:3001/insight-api/`
+The API endpoints will be available by default at: `http://localhost:3001/insight-api-dash/`
 
 ## Prerequisites
 
-- [Bitcore Node 3.x](https://github.com/bitpay/bitcore-node)
+- [Bitcore Node Dash 3.x](https://github.com/dashpay/bitcore-node-dash)
 
-**Note:** You can use an existing Bitcoin data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `bitcoin.conf`, as well as a few other additional fields.
+**Note:** You can use an existing Dash data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `dash.conf`, as well as a few other additional fields.
 
 ## Notes on Upgrading from v0.3
 
@@ -101,15 +101,15 @@ Caching support has not yet been added in the v0.3 upgrade.
 
 ### Block
 ```
-  /insight-api/block/[:hash]
-  /insight-api/block/00000000a967199a2fad0877433c93df785a8d8ce062e5f9b451cd1397bdbf62
+  /insight-api-dash/block/[:hash]
+  /insight-api-dash/block/00000000a967199a2fad0877433c93df785a8d8ce062e5f9b451cd1397bdbf62
 ```
 
 ### Block Index
 Get block hash by height
 ```
-  /insight-api/block-index/[:height]
-  /insight-api/block-index/0
+  /insight-api-dash/block-index/[:height]
+  /insight-api-dash/block-index/0
 ```
 This would return:
 ```
@@ -122,8 +122,8 @@ which is the hash of the Genesis block (0 height)
 
 ### Raw Block
 ```
-  /insight-api/rawblock/[:blockHash]
-  /insight-api/rawblock/[:blockHeight]
+  /insight-api-dash/rawblock/[:blockHash]
+  /insight-api-dash/rawblock/[:blockHeight]
 ```
 
 This would return:
@@ -137,7 +137,7 @@ This would return:
 
 Get block summaries by date:
 ```
-  /insight-api/blocks?limit=3&blockDate=2016-04-22
+  /insight-api-dash/blocks?limit=3&blockDate=2016-04-22
 ```
 
 Example response:
@@ -171,31 +171,31 @@ Example response:
 
 ### Transaction
 ```
-  /insight-api/tx/[:txid]
-  /insight-api/tx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
-  /insight-api/rawtx/[:rawid]
-  /insight-api/rawtx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
+  /insight-api-dash/tx/[:txid]
+  /insight-api-dash/tx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
+  /insight-api-dash/rawtx/[:rawid]
+  /insight-api-dash/rawtx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
 ```
 
 ### Address
 ```
-  /insight-api/addr/[:addr][?noTxList=1][&from=&to=]
-  /insight-api/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?noTxList=1
-  /insight-api/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?from=1000&to=2000
+  /insight-api-dash/addr/[:addr][?noTxList=1][&from=&to=]
+  /insight-api-dash/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?noTxList=1
+  /insight-api-dash/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?from=1000&to=2000
 ```
 
 ### Address Properties
 ```
-  /insight-api/addr/[:addr]/balance
-  /insight-api/addr/[:addr]/totalReceived
-  /insight-api/addr/[:addr]/totalSent
-  /insight-api/addr/[:addr]/unconfirmedBalance
+  /insight-api-dash/addr/[:addr]/balance
+  /insight-api-dash/addr/[:addr]/totalReceived
+  /insight-api-dash/addr/[:addr]/totalSent
+  /insight-api-dash/addr/[:addr]/unconfirmedBalance
 ```
 The response contains the value in Satoshis.
 
 ### Unspent Outputs
 ```
-  /insight-api/addr/[:addr]/utxo
+  /insight-api-dash/addr/[:addr]/utxo
 ```
 Sample return:
 ```
@@ -226,13 +226,13 @@ Sample return:
 ### Unspent Outputs for Multiple Addresses
 GET method:
 ```
-  /insight-api/addrs/[:addrs]/utxo
-  /insight-api/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/utxo
+  /insight-api-dash/addrs/[:addrs]/utxo
+  /insight-api-dash/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/utxo
 ```
 
 POST method:
 ```
-  /insight-api/addrs/utxo
+  /insight-api-dash/addrs/utxo
 ```
 
 POST params:
@@ -242,25 +242,25 @@ addrs: 2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f
 
 ### Transactions by Block
 ```
-  /insight-api/txs/?block=HASH
-  /insight-api/txs/?block=00000000fa6cf7367e50ad14eb0ca4737131f256fc4c5841fd3c3f140140e6b6
+  /insight-api-dash/txs/?block=HASH
+  /insight-api-dash/txs/?block=00000000fa6cf7367e50ad14eb0ca4737131f256fc4c5841fd3c3f140140e6b6
 ```
 ### Transactions by Address
 ```
-  /insight-api/txs/?address=ADDR
-  /insight-api/txs/?address=mmhmMNfBiZZ37g1tgg2t8DDbNoEdqKVxAL
+  /insight-api-dash/txs/?address=ADDR
+  /insight-api-dash/txs/?address=mmhmMNfBiZZ37g1tgg2t8DDbNoEdqKVxAL
 ```
 
 ### Transactions for Multiple Addresses
 GET method:
 ```
-  /insight-api/addrs/[:addrs]/txs[?from=&to=]
-  /insight-api/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/txs?from=0&to=20
+  /insight-api-dash/addrs/[:addrs]/txs[?from=&to=]
+  /insight-api-dash/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/txs?from=0&to=20
 ```
 
 POST method:
 ```
-  /insight-api/addrs/txs
+  /insight-api-dash/addrs/txs
 ```
 
 POST params:
@@ -303,7 +303,7 @@ Note: if pagination params are not specified, the result is an array of transact
 ### Transaction Broadcasting
 POST method:
 ```
-  /insight-api/tx/send
+  /insight-api-dash/tx/send
 ```
 POST params:
 ```
@@ -329,17 +329,17 @@ POST response:
 
 ### Historic Blockchain Data Sync Status
 ```
-  /insight-api/sync
+  /insight-api-dash/sync
 ```
 
 ### Live Network P2P Data Sync Status
 ```
-  /insight-api/peer
+  /insight-api-dash/peer
 ```
 
 ### Status of the Bitcoin Network
 ```
-  /insight-api/status?q=xxx
+  /insight-api-dash/status?q=xxx
 ```
 
 Where "xxx" can be:
@@ -352,7 +352,7 @@ Where "xxx" can be:
 
 ### Utility Methods
 ```
-  /insight-api/utils/estimatefee[?nbBlocks=2]
+  /insight-api-dash/utils/estimatefee[?nbBlocks=2]
 ```
 
 
@@ -361,7 +361,18 @@ The web socket API is served using [socket.io](http://socket.io).
 
 The following are the events published by insight:
 
-`tx`: new transaction received from network. This event is published in the 'inv' room. Data will be a app/models/Transaction object.
+`tx`: new transaction received from network, txlock boolean is set true if a matching txlock event has been observed. This event is published in the 'inv' room. Data will be a app/models/Transaction object.
+Sample output:
+```
+{
+  "txid":"00c1b1acb310b87085c7deaaeba478cef5dc9519fab87a4d943ecbb39bd5b053",
+  "txlock": false,
+  "processed":false
+  ...
+}
+```
+
+`txlock`: InstantSend transaction received from network, this event is published alongside the 'tx' event when a transaction lock event occurs. Data will be a app/models/Transaction object.
 Sample output:
 ```
 {
@@ -370,7 +381,6 @@ Sample output:
   ...
 }
 ```
-
 
 `block`: new block received from network. This event is published in the `inv` room. Data will be a app/models/Block object.
 Sample output:
@@ -419,7 +429,11 @@ html
       socket.emit('subscribe', room);
     })
     socket.on(eventToListenTo, function(data) {
-      console.log("New transaction received: " + data.txid)
+      if (data.txlock) {
+        console.log("New InstantSend transaction received: " + data.txid)
+      } else {
+        console.log("New transaction received: " + data.txid)
+      }
     })
   </script>
 </body>
