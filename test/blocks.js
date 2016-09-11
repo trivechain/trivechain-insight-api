@@ -60,7 +60,7 @@ describe('Blocks', function() {
       'time': 1440987503,
       'nonce': 1868753784,
       'bits': '1a0cf267',
-      'difficulty': 3.0433117726974157e+114,
+      'difficulty': 1295829.93087696,
       'chainwork': '0000000000000000000000000000000000000000000000054626b1839ade284a',
       'previousblockhash': '00000000000001a55f3214e9172eb34b20e0bc5bd6b8007f3f149fca2c8991a4',
       'nextblockhash': '000000000001e866a8057cde0c650796cb8a59e0e6038dc31c69d7ca6649627d',
