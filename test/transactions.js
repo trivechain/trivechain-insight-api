@@ -10,6 +10,7 @@ describe('Transactions', function() {
     it('should have correct data', function(done) {
       var insight = {
         'txid': 'b85334bf2df35c6dd5b294efe92ffc793a78edff75a2ca666fc296ffb04bbba0',
+        'txlock': false,
         'version': 1,
         'locktime': 0,
         'vin': [
@@ -99,6 +100,7 @@ describe('Transactions', function() {
       var detailedTransaction = {
         hex: '7b5485d3628922f004f470f497f6a83f6df4df347e1bce15831a964623f8072b565f7c7bc5dcbc717c6e2a2301a2f6b4a19e65042ad88c9f5d037628de38603c4f137f625e135691e2bd0169cab74e1368abe858f3c3d116e9d13c4c85ead129d9edf0245a3fb1b35561bd230607dca0dcaf3cffc735a3982d8384a1ecc5d622a7bb4db8b5d47d061701978b1f45e2e39946d66c3394f8a20b8ac8c931a6786f761da2d0f3fa2c7c93edee9f2a94de7c47510498767c3d87afe68815bd6058710bf5d8c850a5d20fc217943d9c00da58a4908d92a0912578247746f2086e54cb7b81b6a9e3cc1741457e956d41bdeaae06c441db96ec39a2d17147dd8f468eeaeaaa78dc2e53d66188a791c46b2a4965639ad72a2b90ee52786e36db1a8cf924346b105a40b41a3027dae657782ef7e8b56d6da86062184cb5366d4886cd2ce27471d9d62d1df447f2e5a9641e1f8d1f2b628054d3bd915bf7932bcec6f2dd4965e2406b1dba445b5493ee475757de332618220318dd806b880a7364370c5c0c3b736a653f97b2901fdb5cf4b5b2230b09b2d7bd324a392633d51c598765f9bd286421239a1f25db34a9a61f645eb601e59f10fc1b',
         hash: 'b85334bf2df35c6dd5b294efe92ffc793a78edff75a2ca666fc296ffb04bbba0',
+        txlock: false,
         version: 1,
         blockHash: '0000000000000afa0c3c0afd450c793a1e300ec84cbe9555166e06132f19a8f7',
         height: 533974,
@@ -233,6 +235,7 @@ describe('Transactions', function() {
           feeSatoshis: 0,
           locktime: 0,
           hash: '25a988e54b02e0e5df146a0f8fa7b9db56210533a9f04bdfda5f4ceb6f77aadd',
+          txlock: false,
           inputs: [
             {
               script: '03d6250800feb0aae355fe263600000963676d696e6572343208ae5800000000000000',
@@ -255,6 +258,7 @@ describe('Transactions', function() {
           feeSatoshis: 30000,
           version: 1,
           hash: 'b85334bf2df35c6dd5b294efe92ffc793a78edff75a2ca666fc296ffb04bbba0',
+          txlock: false,
           blockTimestamp: 1440987503,
           height: 533974,
           blockHash: '0000000000000afa0c3c0afd450c793a1e300ec84cbe9555166e06132f19a8f7',
@@ -308,6 +312,7 @@ describe('Transactions', function() {
           feeSatoshis: 10000,
           version: 1,
           hash: '2e01c7a4a0e335112236b711c4aaddd02e8dc59ba2cda416e8f80ff06dddd7e1',
+          txlock: false,
           inputs: [
             {
               address: 'yMMoh9UGDkEaHjzL3a6vfnmxdvnKshFtms',
@@ -371,6 +376,7 @@ describe('Transactions', function() {
         'txs': [
           {
             'txid': '25a988e54b02e0e5df146a0f8fa7b9db56210533a9f04bdfda5f4ceb6f77aadd',
+            'txlock': false,
             'version': 1,
             'locktime': 0,
             'vin': [
@@ -409,6 +415,7 @@ describe('Transactions', function() {
           },
           {
             'txid': 'b85334bf2df35c6dd5b294efe92ffc793a78edff75a2ca666fc296ffb04bbba0',
+            'txlock': false,
             'version': 1,
             'locktime': 0,
             'vin': [
@@ -488,6 +495,7 @@ describe('Transactions', function() {
           },
           {
             'txid': '2e01c7a4a0e335112236b711c4aaddd02e8dc59ba2cda416e8f80ff06dddd7e1',
+            'txlock': false,
             'version': 1,
             'locktime': 533963,
             'vin': [
@@ -641,6 +649,7 @@ describe('Transactions', function() {
           tx: {
             hex: '010000000125c46caa6d839435b43c20d6d48978e677841244b37a09f6f6cd29bfaf5b5eea010000006b483045022100f4d169783bef70e3943d2a617cce55d9fe4e33fc6f9880b8277265e2f619a97002201238648abcdf52960500664e969046d41755f7fc371971ebc78002fc418465a6012103acdcd31d51272403ce0829447e59e2ac9e08ed0bf92011cbf7420addf24534e6feffffff02a913dda5000000001976a9143583efb5e64a4668c6c54bb5fcc30af4417b4f2d88ac809fd500000000001976a9149713201957f42379e574d7c70d506ee49c2c8ad688ac49260800',
             hash: 'bb0ec3b96209fac9529570ea6f83a86af2cceedde4aaf2bfcc4796680d23f1c7',
+            txlock: false,
             version: 1,
             inputs: [
               {
@@ -677,6 +686,7 @@ describe('Transactions', function() {
           tx: {
             hex: '0100000001c7f1230d689647ccbff2aae4ddeeccf26aa8836fea709552c9fa0962b9c30ebb000000006a47304402201ee69281db6b95bb1aa3074059b67581635b719e8f64e4c2694db6ec56ad9447022011e91528996ea459b1fb2c0b59363fecbefe4bc2ca90f7b2382bdaa358f2d5640121034cc057b12a68ee79df998004b9a1341bbb18b17ea4939bebaa3bac001e940f24feffffff02bce0c9a4000000001976a91456e446bc3489543d8324c6d0271524c0bd0506dd88ac80a81201000000001976a914011d2963b619186a318f768dddfd98cd553912a088ac53260800',
             hash: '01f700df84c466f2a389440e5eeacdc47d04f380c39e5d19dce2ce91a11ecba3',
+            txlock: false,
             version: 1,
             inputs: [
               {
@@ -752,6 +762,7 @@ describe('Transactions', function() {
         'txs': [
           {
             'txid': 'bb0ec3b96209fac9529570ea6f83a86af2cceedde4aaf2bfcc4796680d23f1c7',
+            'txlock': false,
             'version': 1,
             'locktime': 534089,
             'vin': [
@@ -817,6 +828,7 @@ describe('Transactions', function() {
           },
           {
             'txid': '01f700df84c466f2a389440e5eeacdc47d04f380c39e5d19dce2ce91a11ecba3',
+            'txlock': false,
             'version': 1,
             'locktime': 534099,
             'vin': [

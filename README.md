@@ -264,6 +264,30 @@ POST params:
 addrs: 2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f
 ```
 
+### InstantSend Transactions
+If a Transaction Lock has been observed by Insight API a 'txlock' value of true will be included in the Transaction Object.
+
+Sample output:
+```
+{
+	"txid": "b7ef92d1dce458276f1189e06bf532eff78f9c504101d3d4c0dfdcd9ebbf3879",
+	"version": 1,
+	"locktime": 133366,
+	"vin": [{ ... }],
+	"vout": [{ ... }],
+	"blockhash": "0000001ab9a138339fe4505a299525ace8cda3b9bcb258a2e5d93ed7a320bf21",
+	"blockheight": 133367,
+	"confirmations": 37,
+	"time": 1483985187,
+	"blocktime": 1483985187,
+	"valueOut": 8.998,
+	"size": 226,
+	"valueIn": 8.999,
+	"fees": 0.001,
+	"txlock": true
+}
+```
+
 ### Transactions by Block
 ```
   /insight-api-dash/txs/?block=HASH
@@ -316,7 +340,8 @@ Sample output:
        size: 225,
        firstSeenTs: undefined,
        valueIn: 0.3454,
-       fees: 0.0001 },
+       fees: 0.0001,
+       txlock: false },
       { ... },
       { ... },
       ...
