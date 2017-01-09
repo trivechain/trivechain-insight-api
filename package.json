@@ -1,7 +1,7 @@
 {
   "name": "insight-api-dash",
-  "description": "A Bitcoin blockchain REST and web socket API service for Bitcore Node.",
-  "version": "0.4.3",
+  "description": "A Dash blockchain REST and web socket API service for Bitcore Node.",
+  "version": "0.4.4",
   "repository": "git://github.com/dashpay/insight-api-dash.git",
   "contributors": [
     {
@@ -46,10 +46,10 @@
     "insight",
     "insight api",
     "blockchain",
-    "bitcoin api",
+    "dash api",
     "blockchain api",
     "json",
-    "bitcore"
+    "bitcore-dash"
   ],
   "engines": {
     "node": ">=0.12.0"
