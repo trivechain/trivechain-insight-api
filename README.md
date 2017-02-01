@@ -379,6 +379,79 @@ POST response:
   }
 ```
 
+### Budget Proposal List
+GET method:
+```
+  /insight-api-dash/gobject/list/proposal
+```
+
+Sample output:
+```
+    [ { Hash: 'b6af3e70c686f660541a77bc035df2e5e46841020699ce3ec8fad786f7d1aa35',
+        DataObject: {
+          end_epoch: 1513555200,
+          name: 'flare03',
+          payment_address: 'yViyoK3NwfH5GXRo7e4DEYkzzhBjDNQaQG',
+          payment_amount: 5,
+          start_epoch: 1482105600,
+          type: 1,
+          url: 'https://www.dash.org'
+        },
+        AbsoluteYesCount: 40,
+        YesCount: 40,
+        NoCount: 0,
+        AbstainCount: 0 } ]
+```
+
+### Budget Proposal Detail
+GET method:
+```
+  /insight-api-dash/gobject/get/[:hash]
+  /insight-api-dash/gobject/get/b6af3e70c686f660541a77bc035df2e5e46841020699ce3ec8fad786f7d1aa35
+```
+
+Sample output:
+```
+    [ { Hash: 'b6af3e70c686f660541a77bc035df2e5e46841020699ce3ec8fad786f7d1aa35',
+        CollateralHash: '24a71d8f221659717560365d2914bc7a00f82ffb8f8c68e7fffce5f35aa23b90',
+       	DataHex: '5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313531333535353230302c226e616d65223a22666c6172653033222c227061796d656e745f61646472657373223a22795669796f4b334e776648354758526f3765344445596b7a7a68426a444e51615147222c227061796d656e745f616d6f756e74223a352c2273746172745f65706f6368223a313438323130353630302c2274797065223a312c2275726c223a2268747470733a2f2f64617368646f742e696f2f702f666c6172653033227d5d5d',
+        DataObject: {
+          end_epoch: 1513555200,
+          name: 'flare03',
+          payment_address: 'yViyoK3NwfH5GXRo7e4DEYkzzhBjDNQaQG',
+          payment_amount: 5,
+          start_epoch: 1482105600,
+          type: 1,
+          url: 'https://www.dash.org'
+        },
+        CreationTime: 1482223714,
+        FundingResult: {
+            AbsoluteYesCount: 40,
+            YesCount: 40,
+            NoCount: 0,
+            AbstainCount: 0
+        },
+        ValidResult: {
+            AbsoluteYesCount: 74,
+            YesCount: 74,
+            NoCount: 0,
+            AbstainCount: 0
+        },
+        DeleteResult: {
+            AbsoluteYesCount: 0,
+            YesCount: 0,
+            NoCount: 0,
+            AbstainCount: 0
+        },
+        EndorsedResult: {
+            AbsoluteYesCount: 0,
+            YesCount: 0,
+            NoCount: 0,
+            AbstainCount: 0
+        } } ]
+```
+
+
 ### Historic Blockchain Data Sync Status
 ```
   /insight-api-dash/sync
