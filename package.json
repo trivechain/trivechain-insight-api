@@ -61,8 +61,8 @@
   "bitcoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "bitcore-lib-dash": "^0.13.20",
-    "bitcore-message-dash": "^1.0.5",
+    "bitcore-lib-dash": "https://gitlab.com/Thunderlabtech/bitcore-node-dash",
+    "bitcore-message-dash": "https://gitlab.com/Thunderlabtech/bitcore-message-dash",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
     "lodash": "^2.4.1",
