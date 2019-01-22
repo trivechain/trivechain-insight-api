@@ -49,7 +49,7 @@
     "dash api",
     "blockchain api",
     "json",
-    "bitcore-dash"
+    "bitcore-trvc"
   ],
   "engines": {
     "node": ">=0.12.0"

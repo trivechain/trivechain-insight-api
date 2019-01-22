@@ -1,24 +1,24 @@
 # Insight API Dash
 
-A Dash blockchain REST and web socket API service for [Bitcore Node Dash](https://github.com/dashpay/bitcore-node-dash).
+A Dash blockchain REST and web socket API service for [Bitcore Node Dash](https://github.com/trivechain/bitcore-node-trvc).
 
-This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/dashpay/insight-ui-dash.
+This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/trivechain/insight-ui-trvc.
 
 ## Getting Started
 
 ```bashl
-npm install -g bitcore-node-dash@latest
-bitcore-node-dash create mynode
+npm install -g bitcore-node-trvc@latest
+bitcore-node-trvc create mynode
 cd mynode
-bitcore-node-dash install insight-api-dash
-bitcore-node-dash start
+bitcore-node-trvc install insight-api-trvc
+bitcore-node-trvc start
 ```
 
-The API endpoints will be available by default at: `http://localhost:3001/insight-api-dash/`
+The API endpoints will be available by default at: `http://localhost:3001/insight-api-trvc/`
 
 ## Prerequisites
 
-- [Bitcore Node Dash 3.x](https://github.com/dashpay/bitcore-node-dash)
+- [Bitcore Node Dash 3.x](https://github.com/trivechain/bitcore-node-trvc)
 
 **Note:** You can use an existing Dash data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `dash.conf`, as well as a few other additional fields.
 
@@ -125,15 +125,15 @@ Or disabled entirely with:
 
 ### Block
 ```
-  /insight-api-dash/block/[:hash]
-  /insight-api-dash/block/00000000a967199a2fad0877433c93df785a8d8ce062e5f9b451cd1397bdbf62
+  /insight-api-trvc/block/[:hash]
+  /insight-api-trvc/block/00000000a967199a2fad0877433c93df785a8d8ce062e5f9b451cd1397bdbf62
 ```
 
 ### Block Index
 Get block hash by height
 ```
-  /insight-api-dash/block-index/[:height]
-  /insight-api-dash/block-index/0
+  /insight-api-trvc/block-index/[:height]
+  /insight-api-trvc/block-index/0
 ```
 This would return:
 ```
@@ -146,8 +146,8 @@ which is the hash of the Genesis block (0 height)
 
 ### Raw Block
 ```
-  /insight-api-dash/rawblock/[:blockHash]
-  /insight-api-dash/rawblock/[:blockHeight]
+  /insight-api-trvc/rawblock/[:blockHash]
+  /insight-api-trvc/rawblock/[:blockHeight]
 ```
 
 This would return:
@@ -161,7 +161,7 @@ This would return:
 
 Get block summaries by date:
 ```
-  /insight-api-dash/blocks?limit=3&blockDate=2016-04-22
+  /insight-api-trvc/blocks?limit=3&blockDate=2016-04-22
 ```
 
 Example response:
@@ -195,31 +195,31 @@ Example response:
 
 ### Transaction
 ```
-  /insight-api-dash/tx/[:txid]
-  /insight-api-dash/tx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
-  /insight-api-dash/rawtx/[:rawid]
-  /insight-api-dash/rawtx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
+  /insight-api-trvc/tx/[:txid]
+  /insight-api-trvc/tx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
+  /insight-api-trvc/rawtx/[:rawid]
+  /insight-api-trvc/rawtx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
 ```
 
 ### Address
 ```
-  /insight-api-dash/addr/[:addr][?noTxList=1][&from=&to=]
-  /insight-api-dash/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?noTxList=1
-  /insight-api-dash/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?from=1000&to=2000
+  /insight-api-trvc/addr/[:addr][?noTxList=1][&from=&to=]
+  /insight-api-trvc/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?noTxList=1
+  /insight-api-trvc/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?from=1000&to=2000
 ```
 
 ### Address Properties
 ```
-  /insight-api-dash/addr/[:addr]/balance
-  /insight-api-dash/addr/[:addr]/totalReceived
-  /insight-api-dash/addr/[:addr]/totalSent
-  /insight-api-dash/addr/[:addr]/unconfirmedBalance
+  /insight-api-trvc/addr/[:addr]/balance
+  /insight-api-trvc/addr/[:addr]/totalReceived
+  /insight-api-trvc/addr/[:addr]/totalSent
+  /insight-api-trvc/addr/[:addr]/unconfirmedBalance
 ```
 The response contains the value in Satoshis.
 
 ### Unspent Outputs
 ```
-  /insight-api-dash/addr/[:addr]/utxo
+  /insight-api-trvc/addr/[:addr]/utxo
 ```
 Sample return:
 ```
@@ -250,13 +250,13 @@ Sample return:
 ### Unspent Outputs for Multiple Addresses
 GET method:
 ```
-  /insight-api-dash/addrs/[:addrs]/utxo
-  /insight-api-dash/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/utxo
+  /insight-api-trvc/addrs/[:addrs]/utxo
+  /insight-api-trvc/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/utxo
 ```
 
 POST method:
 ```
-  /insight-api-dash/addrs/utxo
+  /insight-api-trvc/addrs/utxo
 ```
 
 POST params:
@@ -290,25 +290,25 @@ Sample output:
 
 ### Transactions by Block
 ```
-  /insight-api-dash/txs/?block=HASH
-  /insight-api-dash/txs/?block=00000000fa6cf7367e50ad14eb0ca4737131f256fc4c5841fd3c3f140140e6b6
+  /insight-api-trvc/txs/?block=HASH
+  /insight-api-trvc/txs/?block=00000000fa6cf7367e50ad14eb0ca4737131f256fc4c5841fd3c3f140140e6b6
 ```
 ### Transactions by Address
 ```
-  /insight-api-dash/txs/?address=ADDR
-  /insight-api-dash/txs/?address=mmhmMNfBiZZ37g1tgg2t8DDbNoEdqKVxAL
+  /insight-api-trvc/txs/?address=ADDR
+  /insight-api-trvc/txs/?address=mmhmMNfBiZZ37g1tgg2t8DDbNoEdqKVxAL
 ```
 
 ### Transactions for Multiple Addresses
 GET method:
 ```
-  /insight-api-dash/addrs/[:addrs]/txs[?from=&to=]
-  /insight-api-dash/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/txs?from=0&to=20
+  /insight-api-trvc/addrs/[:addrs]/txs[?from=&to=]
+  /insight-api-trvc/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/txs?from=0&to=20
 ```
 
 POST method:
 ```
-  /insight-api-dash/addrs/txs
+  /insight-api-trvc/addrs/txs
 ```
 
 POST params:
@@ -355,7 +355,7 @@ Note: if pagination params are not specified, the result is an array of transact
 ### Transaction Broadcasting
 POST method:
 ```
-  /insight-api-dash/tx/send
+  /insight-api-trvc/tx/send
 ```
 POST params:
 ```
@@ -382,7 +382,7 @@ POST response:
 ### Budget Proposal List
 GET method:
 ```
-  /insight-api-dash/gobject/list/proposal
+  /insight-api-trvc/gobject/list/proposal
 ```
 
 Sample output:
@@ -406,8 +406,8 @@ Sample output:
 ### Budget Proposal Detail
 GET method:
 ```
-  /insight-api-dash/gobject/get/[:hash]
-  /insight-api-dash/gobject/get/b6af3e70c686f660541a77bc035df2e5e46841020699ce3ec8fad786f7d1aa35
+  /insight-api-trvc/gobject/get/[:hash]
+  /insight-api-trvc/gobject/get/b6af3e70c686f660541a77bc035df2e5e46841020699ce3ec8fad786f7d1aa35
 ```
 
 Sample output:
@@ -454,17 +454,17 @@ Sample output:
 
 ### Historic Blockchain Data Sync Status
 ```
-  /insight-api-dash/sync
+  /insight-api-trvc/sync
 ```
 
 ### Live Network P2P Data Sync Status
 ```
-  /insight-api-dash/peer
+  /insight-api-trvc/peer
 ```
 
 ### Status of the Bitcoin Network
 ```
-  /insight-api-dash/status?q=xxx
+  /insight-api-trvc/status?q=xxx
 ```
 
 Where "xxx" can be:
@@ -477,7 +477,7 @@ Where "xxx" can be:
 
 ### Utility Methods
 ```
-  /insight-api-dash/utils/estimatefee[?nbBlocks=2]
+  /insight-api-trvc/utils/estimatefee[?nbBlocks=2]
 ```
 
 
