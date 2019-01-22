@@ -1,8 +1,8 @@
 {
-  "name": "insight-api-dash",
-  "description": "A Dash blockchain REST and web socket API service for Bitcore Node.",
+  "name": "insight-api-trvc",
+  "description": "A trivechain blockchain REST and web socket API service for Bitcore Node.",
   "version": "0.4.5",
-  "repository": "git://github.com/dashpay/insight-api-dash.git",
+  "repository": "git://github.com/trivechain/insight-api-trvc.git",
   "contributors": [
     {
       "name": "Gustavo Cortez",
@@ -38,9 +38,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/dashpay/insight-api-dash/issues"
+    "url": "https://github.com/trivechain/insight-api-trvc/issues"
   },
-  "homepage": "https://github.com/dashpay/insight-api-dash",
+  "homepage": "https://github.com/trivechain/insight-api-trvc",
   "license": "MIT",
   "keywords": [
     "insight",
@@ -61,8 +61,8 @@
   "bitcoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "bitcore-lib-dash": "ssh+git://git@gitlab.com:Thunderlabtech/bitcore-node-dash.git",
-    "bitcore-message-dash": "ssh+git://git@gitlab.com:Thunderlabtech/bitcore-message-dash.git",
+    "bitcore-lib-trvc": "git@github.com:trivechain/bitcore-node-trvc.git",
+    "bitcore-message-trvc": "git@github.com:trivechain/bitcore-message-trvc.git",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
     "lodash": "^2.4.1",
