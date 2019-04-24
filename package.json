@@ -61,7 +61,7 @@
   "bitcoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "bitcore-lib-trvc": "git@github.com:trivechain/bitcore-node-trvc.git",
+    "bitcore-lib-trvc": "git@github.com:trivechain/bitcore-lib-trvc.git",
     "bitcore-message-trvc": "git@github.com:trivechain/bitcore-message-trvc.git",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
