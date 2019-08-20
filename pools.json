@@ -238,5 +238,61 @@
     "searchStrings":[
       "/BTCC/"
     ]
+  },
+  {
+    "poolName":"Mining Pool Hub",
+    "url":"https://miningpoolhub.com/",
+    "searchStrings":[
+      "/mph/"
+    ]
+  },
+  {
+    "poolName":"CoinMine.pl",
+    "url":"https://www2.coinmine.pl/",
+    "searchStrings":[
+      "/CoinMinePL/"
+    ]
+  },
+  {
+    "poolName":"ViaBTC",
+    "url":"https://viabtc.com/",
+    "searchStrings":[
+      "/ViaBTC/"
+    ]
+  },
+  {
+    "poolName":"TRIVECHAIN.TOP",
+    "url":"http://trivechain.btc.top/",
+    "searchStrings":[
+      "/TRIVECHAIN.TOP/"
+    ]
+  },
+  {
+    "poolName":"beePool.org",
+    "url":"http://www.beepool.org/",
+    "searchStrings":[
+      "/BeePool.org/"
+    ]
+  },
+  {
+    "poolName":"ZPOOL",
+    "url":"https://www.zpool.ca/",
+    "searchStrings":[
+      "www.zpool.ca"
+    ]
+  },
+  {
+    "poolName":"Node Stratum Pool",
+    "url":"https://github.com/zone117x/node-stratum-pool",
+    "searchStrings":[
+      "/nodeStratum/"
+    ]
+  },
+  {
+    "poolName":"Stratum Pool",
+    "url":"https://github.com/trivechain/trivechain-stratum",
+    "searchStrings":[
+      "/stratum/"
+    ]
   }
 ]

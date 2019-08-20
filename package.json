@@ -1,8 +1,8 @@
 {
-  "name": "insight-api-trvc",
-  "description": "A trivechain blockchain REST and web socket API service for Bitcore Node.",
-  "version": "0.4.5",
-  "repository": "git://github.com/trivechain/insight-api-trvc.git",
+  "name": "trivechain-insight-api",
+  "description": "A Trivechain blockchain REST and WebSocket API Service",
+  "version": "2.3.3",
+  "repository": "git://github.com/trivechain/trivechain-insight-api.git",
   "contributors": [
     {
       "name": "Gustavo Cortez",
@@ -38,43 +38,42 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/trivechain/insight-api-trvc/issues"
+    "url": "https://github.com/trivechain/trivechain-insight-api/issues"
   },
-  "homepage": "https://github.com/trivechain/insight-api-trvc",
+  "homepage": "https://github.com/trivechain/trivechain-insight-api",
   "license": "MIT",
   "keywords": [
     "insight",
     "insight api",
     "blockchain",
-    "dash api",
+    "trivechain api",
     "blockchain api",
     "json",
-    "bitcore-trvc"
+    "bitcore-trivechain",
+    "trivechaincore"
   ],
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=6"
   },
   "scripts": {
     "test": "NODE_ENV=test mocha -R spec --recursive"
   },
-  "main": "lib",
-  "bitcoreNode": "lib",
+  "main": "lib/index.js",
   "dependencies": {
-    "async": "*",
-    "bitcore-lib-trvc": "git@github.com:trivechain/bitcore-lib-trvc.git",
-    "bitcore-message-trvc": "git@github.com:trivechain/bitcore-message-trvc.git",
-    "body-parser": "^1.13.3",
-    "compression": "^1.6.1",
-    "lodash": "^2.4.1",
-    "lru-cache": "^4.0.1",
-    "morgan": "^1.7.0",
-    "request": "^2.64.0"
+    "async": "^2.6.2",
+    "trivechaincore-lib": "github:trivechain/trivechaincore-lib",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "lodash": "^4.17.15",
+    "lru-cache": "^5.1.1",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.4.5",
-    "proxyquire": "^1.7.2",
-    "should": "^8.3.1",
-    "sinon": "^1.10.3"
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "proxyquire": "^1.8.0",
+    "should": "^13.2.3",
+    "sinon": "^7.3.2"
   }
 }

@@ -3,12 +3,12 @@
 var should = require('should');
 var sinon = require('sinon');
 var MessagesController = require('../lib/messages');
-var bitcore = require('bitcore-lib-trvc');
+var trivechaincore = require('trivechaincore-lib');
 var _ = require('lodash');
 
 describe('Messages', function() {
 
-  var privateKey = bitcore.PrivateKey.fromWIF('cQwApHAg8hw9AZuxiU4a7g9kFWdaemhPxVZXWiAKgJTx6dPP32fN');
+  var privateKey = trivechaincore.PrivateKey.fromWIF('cQwApHAg8hw9AZuxiU4a7g9kFWdaemhPxVZXWiAKgJTx6dPP32fN');
   var address = 'yYjwsLsPUmsfe3RJ5YqZdJYC2Y9tzHYMWL';
   var badAddress = 'yYjwsLsPUmsfe3RJ5YqZdJYC2Y9tzHYMWW';
   var signature = 'H2TSaZyMt9/oLqqgQzE2iBKNlPVfPp6XOVP7LiNDFU3sdiHahS+aemajhhp4XDaRClee/hlUkJtF0Nuqm3egpPw=';

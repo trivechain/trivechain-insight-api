@@ -1,0 +1,21 @@
+{
+  "network": "livenet",
+  "port": 3001,
+  "services": [
+    "trivechaind",
+    "web",
+    "trivechain/trivechain-insight-api"
+  ],
+  "servicesConfig": {
+    "trivechaind": {
+      "connect": [{
+        "rpchost": "127.0.0.1",
+        "rpcport": 9998,
+        "rpcuser": "trivechainrpc",
+        "rpcpassword": "password",
+        "zmqpubrawtx": "tcp://127.0.0.1:29998",
+        "zmqpubhashblock": "tcp://127.0.0.1:29998"
+      }]
+    }
+  }
+}

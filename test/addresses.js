@@ -3,7 +3,7 @@ var sinon = require('sinon');
 var should = require('should');
 var AddressController = require('../lib/addresses');
 var _ = require('lodash');
-var bitcore = require('bitcore-lib-trvc');
+var trivechaincore = require('trivechaincore-lib');
 
 var txinfos = {
   totalCount: 2,
@@ -213,7 +213,9 @@ describe('Addresses', function() {
         'unconfirmedBalance': 0,
         'unconfirmedBalanceSat': 0,
         'unconfirmedTxApperances': 0,
+        'unconfirmedAppearances': 0,
         'txApperances': 2,
+        'txAppearances': 2,
         'transactions': [
           'bb0ec3b96209fac9529570ea6f83a86af2cceedde4aaf2bfcc4796680d23f1c7',
           '01f700df84c466f2a389440e5eeacdc47d04f380c39e5d19dce2ce91a11ecba3'
@@ -330,7 +332,7 @@ describe('Addresses', function() {
 
       var node = {
         services: {
-          bitcoind: {
+          trivechaind: {
             height: 534230
           }
         },
@@ -394,7 +396,7 @@ describe('Addresses', function() {
 
       var node = {
         services: {
-          bitcoind: {
+          trivechaind: {
             height: 534230
           }
         },
@@ -553,7 +555,7 @@ describe('Addresses', function() {
       var node = {
         getAddressHistory: sinon.stub().callsArgWith(2, null, txinfos2),
         services: {
-          bitcoind: {
+          trivechaind: {
             height: 534232
           }
         },
@@ -691,7 +693,7 @@ describe('Addresses', function() {
       var node = {
         getAddressHistory: sinon.stub().callsArgWith(2, null, txinfos2),
         services: {
-          bitcoind: {
+          trivechaind: {
             height: 534232
           }
         },
