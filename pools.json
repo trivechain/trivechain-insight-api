@@ -1,23 +1,23 @@
-[ 
+[
   {
-    "poolName":"US Pool",
-    "url":"https://us-pool.trivechain.com/",
+    "poolName":"Official Pool",
+    "url":"https://pool.trivechain.com/",
     "searchStrings":[
-      "USPool"
+      "OfficialPool"
     ]
   },
   {
-    "poolName":"EU Pool",
-    "url":"https://eu-pool.trivechain.com/",
+    "poolName":"Swift Pools",
+    "url":"https://swift-pools.com/",
     "searchStrings":[
-      "EUPool"
+      "thepool.life"
     ]
   },
   {
-    "poolName":"SEA Pool",
-    "url":"https://sea-pool.trivechain.com/",
+    "poolName":"YIIMP Pool",
+    "url":"https://github.com/tpruvot/yiimp",
     "searchStrings":[
-      "SEAPool"
+      "yiimp"
     ]
   },
   {
